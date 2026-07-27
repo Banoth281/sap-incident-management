@@ -1,0 +1,16 @@
+using { IncidentService } from './cat-service';
+
+annotate IncidentService.Incidents with @(
+  UI.HeaderInfo : {
+    TypeName       : 'Incident',
+    TypeNamePlural : 'Incidents',
+    Title          : { Value : title }
+  },
+  UI.SelectionFields : [ status, priority ],
+  UI.LineItem : [
+    { Value : ID,          Label : 'Incident ID' },
+    { Value : title,       Label : 'Title' },
+    { Value : priority,    Label : 'Priority' },
+    { Value : status,      Label : 'Status' }
+  ]
+);

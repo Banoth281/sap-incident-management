@@ -1,22 +1,17 @@
-# Getting Started
+# 🛡️ SAP BTP Incident Management System
 
-Welcome to your new CAP project.
+A full-stack enterprise backend and OData service built using the **SAP Cloud Application Programming Model (CAP)**, **OData v4**, and **Node.js**.
 
-It contains these folders and files, following our recommended project layout:
+## 🏗️ Architecture & Features
+- **Domain Modeling:** Core Data Services (CDS) schema (`db/schema.cds`).
+- **OData Services:** Exposing entities via OData v4 endpoints (`srv/cat-service.cds`).
+- **Business Logic:** Custom event handlers for automatic priority formatting (`srv/cat-service.js`).
+- **Fiori Annotations:** UI annotations configured for automated list reports (`srv/cat-service-ui.cds`).
+- **Mock Data:** Pre-populated CSV records for testing (`db/data/`).
 
-File or Folder | Purpose
----------|----------
-`app/` | content for UI frontends goes here
-`db/` | your domain models and data go here
-`srv/` | your service models and code go here
-`readme.md` | this getting started guide
+## 🚀 How to Run Locally
 
-## Next Steps
-
-- Open a new terminal and run `cds watch`
-- (in VS Code simply choose _**Terminal** > Run Task > cds watch_)
-- Start with your domain model, in a CDS file in `db/`
-
-## Learn More
-
-Learn more at <https://cap.cloud.sap>.
+1. Clone this repository:
+   ```bash
+   git clone [https://github.com/Banoth281/sap-incident-management.git](https://github.com/Banoth281/sap-incident-management.git)
+   cd sap-incident-management
