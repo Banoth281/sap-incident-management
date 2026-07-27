@@ -1,15 +1,19 @@
 const cds = require('@sap/cds');
 
 module.exports = cds.service.impl(async function() {
-    const { Incidents } = this.entities;
+  const { Incidents } = this.entities;
 
-    // Triggered automatically before a new Incident is created
-    this.before('CREATE', 'Incidents', (req) => {
-        const { priority, title } = req.data;
-        
-        // Auto-prefix urgent incidents
-        if (priority === 'Urgent' && title && !title.startsWith('[URGENT]')) {
-            req.data.title = `[URGENT] ${title}`;
-        }
-    });
+  // Existing custom logic for URGENT prefix
+  this.before('CREATE', 'Incidents', req => {
+    if (req.data.priority === 'High' && !req.data.title.startsWith('[URGENT]')) {
+      req.data.title = `[URGENT] ${req.data.title}`;
+    }
+  });
+
+  // Custom action to close an incident
+  this.on('closeIncident', Incidents, async (req) => {
+    const id = req.params[0];
+    await UPDATE(Incidents).set({ status: 'Closed' }).where({ ID: id });
+    return req.info('Incident has been successfully closed.');
+  });
 });
