@@ -82,11 +82,6 @@ sap-incident-management/
 
 ---
 
-### 📄 2. License & Author
-
-This adds a final touch of open-source credibility.
-
-```markdown
 ## 👤 Author & License
 
-* **Developer:** [Banoth](https://github.com/Banoth281)
+* **Developer:** [Banoth]
