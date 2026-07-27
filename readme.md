@@ -63,6 +63,10 @@ Ensure your environment meets the following baseline requirements before continu
 Once the server is running, open **[http://localhost:4004](http://localhost:4004)** in your browser to access the service cockpit, OData metadata, and Fiori UI previews.
 
 ---
+### 👤 Author
+
+* **Developer:** Santhosh Banoth
+
 
 ## 📁 Project Structure
 
@@ -77,8 +81,3 @@ sap-incident-management/
 │   └── cat-service-ui.cds    # SAP Fiori UI annotations
 ├── package.json              # Project dependencies & CDS configuration
 └── README.md                 # Project documentation
-
-
-### 👤 Author & License
-
-* **Developer:** Santhosh Banoth
