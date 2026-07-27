@@ -78,10 +78,7 @@ sap-incident-management/
 ├── package.json              # Project dependencies & CDS configuration
 └── README.md                 # Project documentation
 
----
 
----
+### 👤 Author & License
 
-## 👤 Author & License
-
-* **Developer:** [Banoth]
+* **Developer:** Santhosh Banoth
