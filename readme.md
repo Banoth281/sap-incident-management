@@ -14,5 +14,5 @@ A full-stack enterprise backend and OData service built using the **SAP Cloud Ap
 1. Clone this repository:
    ```bash
 git clone [https://github.com/Banoth281/sap-incident-management.git](https://github.com/Banoth281/sap-incident-management.git)
-cd sap-incident-management
+
    cd sap-incident-management
