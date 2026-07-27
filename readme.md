@@ -11,11 +11,11 @@ A full-stack, enterprise-grade OData v4 backend service built using the **SAP Cl
 
 ## 🏛️ Architecture & Key Features
 
-* **Domain Modeling (`db/schema.cds`):** Core Data Services (CDS) entity definitions for incident tracking, customers, and priority levels.
-* **Service Definition (`srv/cat-service.cds`):** Exposing business logic and transactional entities via high-performance OData v4 endpoints.
-* **Custom Event Handlers (`srv/cat-service.js`):** Node.js backend logic executing automated priority calculations, validations, and status transitions.
-* **Fiori Annotations (`srv/cat-service-ui.cds`):** UI layout annotations configured for automated SAP Fiori Elements List Report and Object Page rendering.
-* **Mock Data Seeding (`db/data/`):** Pre-populated CSV dataset for rapid local testing and development.
+* **Domain Modeling (`db/schema.cds`):** Core Data Services (CDS) entity definitions establishing relationships for incidents, customers, and priority levels.
+* **OData v4 Service Definition (`srv/cat-service.cds`):** Exposes transactional business entities through high-performance OData v4 endpoints.
+* **Custom Event Logic (`srv/cat-service.js`):** Node.js backend handlers executing real-time priority calculations, input validations, and status transitions.
+* **SAP Fiori Annotations (`srv/cat-service-ui.cds`):** Metadata annotations driving automated SAP Fiori Elements rendering (List Report & Object Page).
+* **Automated Data Seeding (`db/data/`):** Pre-populated CSV datasets for immediate zero-config testing in local development environments.
 
 ---
 
@@ -23,17 +23,22 @@ A full-stack, enterprise-grade OData v4 backend service built using the **SAP Cl
 
 ### Prerequisites
 
-* **Node.js**: `v20.x` or `v22.5+` (recommended)
-* **SAP CDS Command Line Tools**: Install globally via `npm i -g @sap/cds-dk`
+Ensure your environment meets the following baseline requirements before continuing:
+
+* **Node.js:** `v20.x` or `v22.5+` *(LTS recommended)*
+* **SAP CDS Development Kit:** Install globally via terminal:
+  ```bash
+  npm install -g @sap/cds-dk
+
+---
 
 ### Installation & Local Setup
 
 1. **Clone the repository:**
    ```bash
    git clone (https://github.com/Banoth281/sap-incident-management.git)
-   cd sap-incident-management
 
-
+---
 
 ## 🧰 Tech Stack & Tools
 
@@ -52,6 +57,36 @@ A full-stack, enterprise-grade OData v4 backend service built using the **SAP Cl
 * **Environment-Safe Configuration:** Outlined precise Node.js runtime and database driver specifications to ensure consistent cross-environment setup and prevent execution conflicts.
 * **Scannable Architecture Overview:** Formatted project components—including CDS entity schemas, OData endpoints, and custom event handlers—for quick reference by technical reviewers.
 
+
 ### 🌐 Endpoints & Testing
 
 Once the server is running, open **[http://localhost:4004](http://localhost:4004)** in your browser to access the service cockpit, OData metadata, and Fiori UI previews.
+
+---
+
+## 📁 Project Structure
+
+```text
+sap-incident-management/
+├── db/                       # Data domain models & mock data
+│   ├── data/                 # CSV files for initial database seeding
+│   └── schema.cds            # CDS entity definitions
+├── srv/                      # Business services & UI layout
+│   ├── cat-service.cds       # OData service definition
+│   ├── cat-service.js        # Node.js event handlers & custom logic
+│   └── cat-service-ui.cds    # SAP Fiori UI annotations
+├── package.json              # Project dependencies & CDS configuration
+└── README.md                 # Project documentation
+
+---
+
+---
+
+### 📄 2. License & Author
+
+This adds a final touch of open-source credibility.
+
+```markdown
+## 👤 Author & License
+
+* **Developer:** [Banoth](https://github.com/Banoth281)
