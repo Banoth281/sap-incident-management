@@ -30,34 +30,28 @@ A full-stack, enterprise-grade OData v4 backend service built using the **SAP Cl
 
 1. **Clone the repository:**
    ```bash
-   git clone [https://github.com/Banoth281/sap-incident-management.git](https://github.com/Banoth281/sap-incident-management.git)
+   git clone (https://github.com/Banoth281/sap-incident-management.git)
    cd sap-incident-management
 
-### 🌐 Endpoints & Testing
-Once the server is running locally at http://localhost:4004:
 
-Resource,URL,Description
-Fiori Preview,http://localhost:4004/$fiori-preview/IncidentService/Incidents,Full Fiori Elements UI preview
-Service Document,http://localhost:4004/cat/,Root OData v4 Service endpoint
-Metadata,http://localhost:4004/cat/$metadata,OData metadata XML schema
-Incidents Entity,http://localhost:4004/cat/Incidents,Raw OData JSON feed for Incidents
 
-### 🧰 Tech Stack & Tools
-Framework: SAP Cloud Application Programming Model (CAP)
+## 🧰 Tech Stack & Tools
 
-Runtime: Node.js
-
-Database Driver: @cap-js/sqlite / sqlite3
-
-UI: SAP Fiori Elements (List Report & Object Page)
-
-Control / Versioning: Git & GitHub
+![SAP CAP](https://img.shields.io/badge/Framework-SAP%20CAP-blue?style=for-the-badge&logo=sap)
+![Node.js](https://img.shields.io/badge/Runtime-Node.js-green?style=for-the-badge&logo=node.js)
+![SQLite](https://img.shields.io/badge/Database-SQLite-lightgrey?style=for-the-badge&logo=sqlite)
+![SAP Fiori](https://img.shields.io/badge/UI-SAP%20Fiori%20Elements-0070F3?style=for-the-badge&logo=sap)
+![Git](https://img.shields.io/badge/Version%20Control-Git%20%26%20GitHub-181717?style=for-the-badge&logo=github)
 
 ---
 
-### 🎨 Key Enhancements Made:
+## 🚀 Key Features & Architectural Enhancements
 
-1. **Shields Badges:** Instantly communicates your tech stack (CAP, Node.js, SQLite, OData v4) at the very top.
-2. **Interactive Endpoint Table:** Gives anyone reviewing your code immediate links to test the service locally.
-3. **Clear Prerequisites & Notes:** Clarifies Node.js requirements and explicitly explains why `--in-memory` is used for testing.
-4. **Clean Tech Stack Summary:** Formats technologies cleanly at the bottom for easy scanning by hiring managers and tech teams.
+* **Visual Tech Stack Badges:** Integrated dynamic status badges highlighting core enterprise dependencies (**SAP CAP**, **Node.js**, **SQLite**, **OData v4**) for rapid technical evaluation.
+* **Streamlined Local Testing:** Centralized service access via a single endpoint, providing immediate entry to the OData service cockpit and Fiori Elements UI preview.
+* **Environment-Safe Configuration:** Outlined precise Node.js runtime and database driver specifications to ensure consistent cross-environment setup and prevent execution conflicts.
+* **Scannable Architecture Overview:** Formatted project components—including CDS entity schemas, OData endpoints, and custom event handlers—for quick reference by technical reviewers.
+
+### 🌐 Endpoints & Testing
+
+Once the server is running, open **[http://localhost:4004](http://localhost:4004)** in your browser to access the service cockpit, OData metadata, and Fiori UI previews.
