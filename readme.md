@@ -2,10 +2,15 @@
 
 A full-stack, enterprise-grade OData v4 backend service built using the **SAP Cloud Application Programming Model (CAP)**, **Node.js**, and **SAP Fiori Elements**.
 
-[![SAP CAP](https://img.shields.io/badge/SAP%20CAP-v10-blue.svg)](https://cap.cloud.sap/docs/)
-[![Node.js](https://img.shields.io/badge/Node.js-v20%2B%20%7C%20v22-green.svg)](https://nodejs.org/)
-[![Database](https://img.shields.io/badge/Database-SQLite-lightgrey.svg)](https://www.sqlite.org/)
-[![Protocol](https://img.shields.io/badge/Protocol-OData%20v4-orange.svg)](https://www.odata.org/)
+---
+
+## 🧰 Tech Stack & Tools
+
+![SAP CAP](https://img.shields.io/badge/SAP%20CAP-0070F3?style=for-the-badge&logo=sap&logoColor=white)
+![Node.js](https://img.shields.io/badge/Node.js-339933?style=for-the-badge&logo=nodedotjs&logoColor=white)
+![OData v4](https://img.shields.io/badge/OData-v4-006699?style=for-the-badge)
+![SQLite](https://img.shields.io/badge/SQLite-003B57?style=for-the-badge&logo=sqlite&logoColor=white)
+![SAP Fiori](https://img.shields.io/badge/SAP%20Fiori-0070F3?style=for-the-badge&logo=sap&logoColor=white)
 
 ---
 
@@ -19,60 +24,14 @@ A full-stack, enterprise-grade OData v4 backend service built using the **SAP Cl
 
 ---
 
-## 🚀 Getting Started
+## 🚀 Key Architectural Enhancements
 
-### Prerequisites
-
-Ensure your environment meets the following baseline requirements before continuing:
-
-* **Node.js:** `v20.x` or `v22.5+` *(LTS recommended)*
-* **SAP CDS Development Kit:** Install globally via terminal:
-  ```bash
-  npm install -g @sap/cds-dk
-
----
-
-### Installation & Local Setup
-
-1. **Clone the repository:**
-   ```bash
-   git clone (https://github.com/Banoth281/sap-incident-management.git)
-
----
-
-## 🧰 Tech Stack & Tools
-
-![SAP CAP](https://img.shields.io/badge/Framework-SAP%20CAP-blue?style=for-the-badge&logo=sap)
-![Node.js](https://img.shields.io/badge/Runtime-Node.js-green?style=for-the-badge&logo=node.js)
-![SQLite](https://img.shields.io/badge/Database-SQLite-lightgrey?style=for-the-badge&logo=sqlite)
-![SAP Fiori](https://img.shields.io/badge/UI-SAP%20Fiori%20Elements-0070F3?style=for-the-badge&logo=sap)
-![Git](https://img.shields.io/badge/Version%20Control-Git%20%26%20GitHub-181717?style=for-the-badge&logo=github)
-
----
-
-## 🚀 Key Features & Architectural Enhancements
-
-* **Visual Tech Stack Badges:** Integrated dynamic status badges highlighting core enterprise dependencies (**SAP CAP**, **Node.js**, **SQLite**, **OData v4**) for rapid technical evaluation.
+* **Visual Tech Stack Badges:** Integrated dynamic status badges highlighting core enterprise dependencies for rapid technical evaluation.
 * **Streamlined Local Testing:** Centralized service access via a single endpoint, providing immediate entry to the OData service cockpit and Fiori Elements UI preview.
 * **Environment-Safe Configuration:** Outlined precise Node.js runtime and database driver specifications to ensure consistent cross-environment setup and prevent execution conflicts.
 * **Scannable Architecture Overview:** Formatted project components—including CDS entity schemas, OData endpoints, and custom event handlers—for quick reference by technical reviewers.
 
-
-### 🌐 Endpoints & Testing
-
-Once the server is running (`cds watch`), open **[http://localhost:4004](http://localhost:4004)** in your browser to access:
-
-* **Service Cockpit:** Overview of all active endpoints and services.
-* **OData Metadata:** Inspect entity definitions via `/odata/v4/incident/$metadata`.
-* **Fiori UI Preview:** Launch the web interface for managing incident records.
-
 ---
-
-### 👤 Author
-
-* **Developer:** Santhosh Banoth
-
-
 
 ## 📁 Project Structure
 
@@ -85,23 +44,8 @@ sap-incident-management/
 │   ├── cat-service.cds   # OData service endpoints
 │   └── cat-service.js    # Event handlers and business logic
 ├── images/               # Screenshots and UI assets for documentation
-│   └── fiori-list.png    # Fiori UI preview images
+│   └── fiori-incident-list.png  # Fiori UI preview image
 ├── package.json          # Project dependencies and CAP scripts
 ├── mta.yaml              # Multi-Target Application deployment descriptor
 └── readme.md             # Project documentation
 ```
----
-
----
-
-### 🖥️ SAP Fiori Web Application UI
-
-The dynamic user interface is built using SAP Fiori Elements based on annotations defined in the CDS services.
-
-![SAP Fiori Elements - Incidents List Report](./fiori-incident-list.png)
-
-### Features & Capabilities:
-* **Filter Bar:** Search across incident records and filter dynamically by `status` or `priority`.
-* **List Report Table:** Displays active incidents, complete with unique `Incident ID`, `Title`, `Priority`, and `Status`.
-* **Action Buttons:** Built-in table action options including custom logic triggers (e.g., `Close Incident`, `Delete`).
-* **Object Page Navigation:** Click on any row to open the full detail view for a specific incident.
