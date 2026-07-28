@@ -67,12 +67,12 @@ Once the server is running (`cds watch`), open **[http://localhost:4004](http://
 * **Fiori UI Preview:** Launch the web interface for managing incident records.
 
 ---
+
 ### 👤 Author
 
 * **Developer:** Santhosh Banoth
 
 
-## 📁 Project Structure
 
 ## 📁 Project Structure
 
@@ -89,6 +89,8 @@ sap-incident-management/
 ├── package.json          # Project dependencies and CAP scripts
 ├── mta.yaml              # Multi-Target Application deployment descriptor
 └── readme.md             # Project documentation
+```
+---
 
 ---
 
