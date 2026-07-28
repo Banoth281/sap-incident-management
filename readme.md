@@ -59,7 +59,7 @@ Once the server is running (`cds watch`), open **[http://localhost:4004](http://
 
 ---
 
-## 🖥️ SAP Fiori Web Application UI
+### 🖥️ SAP Fiori Web Application UI
 
 The dynamic user interface is built using **SAP Fiori Elements** based on annotations defined in the CDS services.
 
@@ -73,6 +73,6 @@ The dynamic user interface is built using **SAP Fiori Elements** based on annota
 
 ---
 
-## 👤 Author
+### 👤 Author
 
 * **Developer:** Santhosh Banoth
