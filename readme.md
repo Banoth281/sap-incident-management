@@ -76,19 +76,14 @@ sap-incident-management/
 │   ├── data/                 # CSV files for initial database seeding
 │   └── schema.cds            # CDS entity defin
 ```
-sap-incident-management/
-├── images/
-│   └── fiori-incident-list.png
-├── db/
-├── srv/
-└── readme.md
+
 ---
 
 ### 🖥️ SAP Fiori Web Application UI
 
 The dynamic user interface is built using SAP Fiori Elements based on annotations defined in the CDS services.
 
-![SAP Fiori Elements - Incidents List Report](./images/fiori-incident-list.png)
+![SAP Fiori Elements - Incidents List Report](./fiori-incident-list.png)
 
 ### Features & Capabilities:
 * **Filter Bar:** Search across incident records and filter dynamically by `status` or `priority`.
