@@ -63,7 +63,7 @@ Once the server is running (`cds watch`), open **[http://localhost:4004](http://
 
 The dynamic user interface is built using **SAP Fiori Elements** based on annotations defined in the CDS services.
 
-![Incident List](./images/fiori-incident-list.png)
+![SAP Fiori Elements - Incidents List Report](./fiori-incident-list.png)
 
 ### Features & Capabilities:
 * **Filter Bar:** Search across incident records and filter dynamically by `status` or `priority`.
