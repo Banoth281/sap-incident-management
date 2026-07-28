@@ -76,7 +76,12 @@ sap-incident-management/
 │   ├── data/                 # CSV files for initial database seeding
 │   └── schema.cds            # CDS entity defin
 ```
-
+sap-incident-management/
+├── images/
+│   └── fiori-incident-list.png
+├── db/
+├── srv/
+└── readme.md
 ---
 
 ### 🖥️ SAP Fiori Web Application UI
