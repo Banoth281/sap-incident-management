@@ -60,7 +60,11 @@ Ensure your environment meets the following baseline requirements before continu
 
 ### 🌐 Endpoints & Testing
 
-Once the server is running, open **[http://localhost:4004](http://localhost:4004)** in your browser to access the service cockpit, OData metadata, and Fiori UI previews.
+Once the server is running (`cds watch`), open **[http://localhost:4004](http://localhost:4004)** in your browser to access:
+
+* **Service Cockpit:** Overview of all active endpoints and services.
+* **OData Metadata:** Inspect entity definitions via `/odata/v4/incident/$metadata`.
+* **Fiori UI Preview:** Launch the web interface for managing incident records.
 
 ---
 ### 👤 Author
