@@ -49,3 +49,30 @@ sap-incident-management/
 ├── mta.yaml              # Multi-Target Application deployment descriptor
 └── readme.md             # Project documentation
 ```
+## 🌐 Endpoints & Testing
+
+Once the server is running (`cds watch`), open **[http://localhost:4004](http://localhost:4004)** in your browser to access:
+
+* **Service Cockpit:** Overview of all active endpoints and services.
+* **OData Metadata:** Inspect entity definitions via `/odata/v4/incident/$metadata`.
+* **Fiori UI Preview:** Launch the web interface for managing incident records.
+
+---
+
+## 🖥️ SAP Fiori Web Application UI
+
+The dynamic user interface is built using **SAP Fiori Elements** based on annotations defined in the CDS services.
+
+![Incident List](./images/fiori-incident-list.png)
+
+### Features & Capabilities:
+* **Filter Bar:** Search across incident records and filter dynamically by `status` or `priority`.
+* **List Report Table:** Displays active incidents, complete with unique `Incident ID`, `Title`, `Priority`, and `Status`.
+* **Action Buttons:** Built-in table action options including custom logic triggers (e.g., `Close Incident`, `Delete`).
+* **Object Page Navigation:** Click on any row to open the full detail view for a specific incident.
+
+---
+
+## 👤 Author
+
+* **Developer:** Santhosh Banoth
