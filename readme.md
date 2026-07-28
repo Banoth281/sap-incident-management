@@ -74,10 +74,19 @@ Once the server is running, open **[http://localhost:4004](http://localhost:4004
 sap-incident-management/
 ├── db/                       # Data domain models & mock data
 │   ├── data/                 # CSV files for initial database seeding
-│   └── schema.cds            # CDS entity definitions
-├── srv/                      # Business services & UI layout
-│   ├── cat-service.cds       # OData service definition
-│   ├── cat-service.js        # Node.js event handlers & custom logic
-│   └── cat-service-ui.cds    # SAP Fiori UI annotations
-├── package.json              # Project dependencies & CDS configuration
-└── README.md                 # Project documentation
+│   └── schema.cds            # CDS entity defin
+```
+
+---
+
+### 🖥️ SAP Fiori Web Application UI
+
+The dynamic user interface is built using SAP Fiori Elements based on annotations defined in the CDS services.
+
+![SAP Fiori Elements - Incidents List Report](./images/fiori-incident-list.png)
+
+### Features & Capabilities:
+* **Filter Bar:** Search across incident records and filter dynamically by `status` or `priority`.
+* **List Report Table:** Displays active incidents, complete with unique `Incident ID`, `Title`, `Priority`, and `Status`.
+* **Action Buttons:** Built-in table action options including custom logic triggers (e.g., `Close Incident`, `Delete`).
+* **Object Page Navigation:** Click on any row to open the full detail view for a specific incident.
