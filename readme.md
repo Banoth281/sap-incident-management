@@ -74,12 +74,21 @@ Once the server is running (`cds watch`), open **[http://localhost:4004](http://
 
 ## 📁 Project Structure
 
+## 📁 Project Structure
+
 ```text
 sap-incident-management/
-├── db/                       # Data domain models & mock data
-│   ├── data/                 # CSV files for initial database seeding
-│   └── schema.cds            # CDS entity defin
-```
+├── db/                   # Data domain models & mock data
+│   ├── data/             # CSV files for initial database seeding
+│   └── schema.cds        # CDS entity definitions
+├── srv/                  # Service definitions and custom logic handlers
+│   ├── cat-service.cds   # OData service endpoints
+│   └── cat-service.js    # Event handlers and business logic
+├── images/               # Screenshots and UI assets for documentation
+│   └── fiori-list.png    # Fiori UI preview images
+├── package.json          # Project dependencies and CAP scripts
+├── mta.yaml              # Multi-Target Application deployment descriptor
+└── readme.md             # Project documentation
 
 ---
 
