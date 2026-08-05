@@ -16,7 +16,7 @@
     "express": "^5.2.1"
   },
   "devDependencies": {
-    "@sap/cds-dk": "^10",
+    "@sap/cds-dk": "^10.0.6",
     "sqlite3": "^5.1.7"
   },
   "cds": {
