@@ -1,78 +1,236 @@
 # 🛠️ SAP CAP Incident Management System
 
-A full-stack, enterprise-grade OData v4 backend service built using the **SAP Cloud Application Programming Model (CAP)**, **Node.js**, and **SAP Fiori Elements**.
+[![SAP CAP CI](https://github.com/Banoth281/sap-incident-management/actions/workflows/ci.yml/badge.svg)](https://github.com/Banoth281/sap-incident-management/actions/workflows/ci.yml)
+
+Enterprise-grade Incident Management System built using the **SAP Cloud Application Programming Model (CAP)**, **Node.js**, **OData v4**, **SQLite**, and **SAP Fiori Elements**.
+
+This project demonstrates enterprise backend development using SAP technologies, including CDS data modeling, OData services, business logic implementation, and automated CI with GitHub Actions.
 
 ---
 
-## 🧰 Tech Stack & Tools
+# 📖 Overview
 
-![SAP CAP](https://img.shields.io/badge/SAP%20CAP-0070F3?style=for-the-badge&logo=sap&logoColor=white)
-![Node.js](https://img.shields.io/badge/Node.js-339933?style=for-the-badge&logo=nodedotjs&logoColor=white)
-![OData v4](https://img.shields.io/badge/OData-v4-006699?style=for-the-badge)
-![SQLite](https://img.shields.io/badge/SQLite-003B57?style=for-the-badge&logo=sqlite&logoColor=white)
-![SAP Fiori](https://img.shields.io/badge/SAP%20Fiori-0070F3?style=for-the-badge&logo=sap&logoColor=white)
+The SAP CAP Incident Management System provides a complete backend service for managing incidents through SAP Fiori Elements.
 
----
+The application demonstrates:
 
-## 🏛️ Architecture & Key Features
-
-* **Domain Modeling (`db/schema.cds`):** Core Data Services (CDS) entity definitions establishing relationships for incidents, customers, and priority levels.
-* **OData v4 Service Definition (`srv/cat-service.cds`):** Exposes transactional business entities through high-performance OData v4 endpoints.
-* **Custom Event Logic (`srv/cat-service.js`):** Node.js backend handlers executing real-time priority calculations, input validations, and status transitions.
-* **SAP Fiori Annotations (`srv/cat-service-ui.cds`):** Metadata annotations driving automated SAP Fiori Elements rendering (List Report & Object Page).
-* **Automated Data Seeding (`db/data/`):** Pre-populated CSV datasets for immediate zero-config testing in local development environments.
+- Enterprise CDS data modelling
+- OData v4 service development
+- SAP Fiori Elements UI
+- Custom business logic
+- SQLite database integration
+- GitHub Actions CI pipeline
 
 ---
 
-## 🚀 Key Architectural Enhancements
+# 🚀 Features
 
-* **Visual Tech Stack Badges:** Integrated dynamic status badges highlighting core enterprise dependencies for rapid technical evaluation.
-* **Streamlined Local Testing:** Centralized service access via a single endpoint, providing immediate entry to the OData service cockpit and Fiori Elements UI preview.
-* **Environment-Safe Configuration:** Outlined precise Node.js runtime and database driver specifications to ensure consistent cross-environment setup and prevent execution conflicts.
-* **Scannable Architecture Overview:** Formatted project components—including CDS entity schemas, OData endpoints, and custom event handlers—for quick reference by technical reviewers.
+- ✅ Incident Management
+- ✅ Customer Management
+- ✅ Priority Management
+- ✅ Status Tracking
+- ✅ SAP Fiori Elements UI
+- ✅ OData v4 APIs
+- ✅ CDS Data Models
+- ✅ SQLite Database
+- ✅ GitHub Actions CI
+- ✅ Automated Validation
 
 ---
 
-## 📁 Project Structure
+# 🏗️ Architecture
 
-```text
-sap-incident-management/
-├── db/                   # Data domain models & mock data
-│   ├── data/             # CSV files for initial database seeding
-│   └── schema.cds        # CDS entity definitions
-├── srv/                  # Service definitions and custom logic handlers
-│   ├── cat-service.cds   # OData service endpoints
-│   └── cat-service.js    # Event handlers and business logic
-├── images/               # Screenshots and UI assets for documentation
-│   └── fiori-incident-list.png  # Fiori UI preview image
-├── package.json          # Project dependencies and CAP scripts
-├── mta.yaml              # Multi-Target Application deployment descriptor
-└── readme.md             # Project documentation
 ```
-## 🌐 Endpoints & Testing
-
-Once the server is running (`cds watch`), open **[http://localhost:4004](http://localhost:4004)** in your browser to access:
-
-* **Service Cockpit:** Overview of all active endpoints and services.
-* **OData Metadata:** Inspect entity definitions via `/odata/v4/incident/$metadata`.
-* **Fiori UI Preview:** Launch the web interface for managing incident records.
+                    +-------------------------+
+                    |     SAP Fiori UI        |
+                    +-----------+-------------+
+                                |
+                                |
+                     OData v4 Services
+                                |
+                                |
+                    +-----------v-------------+
+                    |    SAP CAP Services     |
+                    |   (Node.js + CDS)       |
+                    +-----------+-------------+
+                                |
+                                |
+                     Business Logic (JS)
+                                |
+                                |
+                    +-----------v-------------+
+                    |      SQLite Database    |
+                    +-------------------------+
+```
 
 ---
 
-### 🖥️ SAP Fiori Web Application UI
+# 🧰 Technology Stack
 
-The dynamic user interface is built using **SAP Fiori Elements** based on annotations defined in the CDS services.
-
-![SAP Fiori Elements - Incidents List Report](./fiori-incident-list.png)
-
-### Features & Capabilities:
-* **Filter Bar:** Search across incident records and filter dynamically by `status` or `priority`.
-* **List Report Table:** Displays active incidents, complete with unique `Incident ID`, `Title`, `Priority`, and `Status`.
-* **Action Buttons:** Built-in table action options including custom logic triggers (e.g., `Close Incident`, `Delete`).
-* **Object Page Navigation:** Click on any row to open the full detail view for a specific incident.
+| Technology | Purpose |
+|------------|---------|
+| SAP CAP | Backend Framework |
+| Node.js | Runtime |
+| SAP CDS | Data Modelling |
+| OData v4 | RESTful Services |
+| SQLite | Database |
+| SAP Fiori Elements | UI |
+| GitHub Actions | CI/CD |
+| Express.js | Web Framework |
 
 ---
 
-### 👤 Author
+# 📁 Project Structure
 
-* **Developer:** Santhosh Banoth
+```
+sap-incident-management
+│
+├── db
+│   ├── data
+│   └── schema.cds
+│
+├── srv
+│   ├── cat-service.cds
+│   ├── cat-service-ui.cds
+│   └── cat-service.js
+│
+├── images
+│
+├── .github
+│   └── workflows
+│
+├── package.json
+├── package-lock.json
+├── mta.yaml
+└── README.md
+```
+
+---
+
+# ⚙️ Installation
+
+Clone the repository
+
+```bash
+git clone https://github.com/Banoth281/sap-incident-management.git
+```
+
+Move into the project
+
+```bash
+cd sap-incident-management
+```
+
+Install dependencies
+
+```bash
+npm install
+```
+
+Start the CAP application
+
+```bash
+npx cds watch
+```
+
+---
+
+# ▶️ Running the Application
+
+Open your browser
+
+```
+http://localhost:4004
+```
+
+Useful endpoints
+
+| Endpoint | Description |
+|----------|-------------|
+| `/` | CAP Home Page |
+| `/odata/v4/incident` | OData Service |
+| `/odata/v4/incident/$metadata` | Service Metadata |
+| `/odata/v4/incident/Incidents` | Incident Records |
+
+---
+
+# 📷 Application Screenshots
+
+## SAP Fiori List Report
+
+![Incident List](images/fiori-incident-list.png)
+
+---
+
+## SAP Fiori Object Page
+
+![Incident Details](images/fiori-incident-list2.png)
+
+---
+
+# ⚡ GitHub Actions
+
+This project uses **GitHub Actions** for Continuous Integration.
+
+The workflow automatically performs:
+
+- Checkout Repository
+- Setup Node.js
+- Install Dependencies
+- Verify SAP CAP Project
+- Validate CDS Models
+- Execute Tests
+
+---
+
+# 📊 Database
+
+SQLite is used as the local development database.
+
+CAP automatically creates and seeds the database during development.
+
+---
+
+# 📡 OData Services
+
+Example endpoint
+
+```
+GET /odata/v4/incident/Incidents
+```
+
+Metadata
+
+```
+GET /odata/v4/incident/$metadata
+```
+
+---
+
+# 🎯 Skills Demonstrated
+
+- SAP CAP Development
+- Node.js Backend Development
+- SAP CDS Modelling
+- OData v4 APIs
+- SQLite Integration
+- SAP Fiori Elements
+- Enterprise Application Development
+- GitHub Actions CI/CD
+- RESTful Services
+- Backend Validation
+
+---
+
+# 👨‍💻 Author
+
+**Santhosh Banoth**
+
+- GitHub: https://github.com/Banoth281
+- LinkedIn: https://linkedin.com/in/banoth281
+
+---
+
+# 📄 License
+
+This project is licensed under the MIT License.
