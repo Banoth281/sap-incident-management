@@ -4,8 +4,7 @@
   "description": "Welcome to your new CAP project.",
   "main": "index.js",
   "scripts": {
-  "test": "echo \"No tests configured\""
-}
+    "test": "echo \"No tests configured\""
   },
   "keywords": [],
   "author": "",
