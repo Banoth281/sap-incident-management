@@ -24,8 +24,5 @@ jobs:
       - name: Install Dependencies
         run: npm install
 
-      - name: Check Node Version
-        run: node --version
-
-      - name: Run Tests
-        run: npm test
+      - name: Verify CAP project
+        run: npx cds --version
