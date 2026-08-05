@@ -1,12 +1,10 @@
-name: CI Pipeline
+name: SAP CAP CI
 
 on:
   push:
-    branches:
-      - main
+    branches: [main]
   pull_request:
-    branches:
-      - main
+    branches: [main]
 
 jobs:
   build:
@@ -24,5 +22,8 @@ jobs:
       - name: Install Dependencies
         run: npm install
 
-      - name: Verify CAP project
+      - name: Verify SAP CAP Installation
         run: npx cds --version
+
+      - name: Verify Project
+        run: npm test
