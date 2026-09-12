@@ -1,5 +1,7 @@
 name: Deploy SAP incident demo to GitHub Pages
 
+# Publishes the recruiter-facing browser demo from docs.
+
 on:
   push:
     branches: [main]
