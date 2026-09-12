@@ -1,0 +1,80 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="description" content="Interactive SAP CAP incident management portfolio demo">
+  <title>SAP Incident Management</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <aside class="rail">
+    <div class="logo"><span>S</span><div>SAP Operations<small>Incident Management</small></div></div>
+    <nav>
+      <button class="nav active">▦ Incident workspace</button>
+      <a class="nav" href="https://github.com/Banoth281/sap-incident-management" target="_blank">⌘ Source repository</a>
+    </nav>
+    <div class="stack">
+      <strong>Application stack</strong>
+      <span>SAP CAP · Node.js</span><span>OData v4 · CDS</span><span>Fiori Elements · SQLite</span>
+    </div>
+  </aside>
+
+  <main>
+    <header>
+      <div><p class="eyebrow">ENTERPRISE SERVICE OPERATIONS</p><h1>Incident Management</h1><p>Interactive portfolio demo modelled on the project’s SAP CAP entities and business rules.</p></div>
+      <button id="newIncident" class="primary">＋ Create incident</button>
+    </header>
+
+    <section class="notice"><span>●</span><div><strong>Demo service online</strong><small>Browser simulation of the CAP service. Data changes are stored only on this device.</small></div></section>
+
+    <section class="kpis">
+      <article><small>Total incidents</small><strong id="totalKpi">0</strong><span>All service records</span></article>
+      <article><small>Open workload</small><strong id="openKpi">0</strong><span>New and in progress</span></article>
+      <article><small>High priority</small><strong id="priorityKpi">0</strong><span>Immediate attention</span></article>
+      <article><small>Resolution rate</small><strong id="resolutionKpi">0%</strong><span>Resolved or closed</span></article>
+    </section>
+
+    <section class="workspace">
+      <div class="toolbar">
+        <div><h2>Incident list</h2><p>Search, filter and manage service incidents</p></div>
+        <div class="filters">
+          <input id="search" placeholder="Search incidents">
+          <select id="statusFilter"><option>All statuses</option><option>New</option><option>InProgress</option><option>Resolved</option><option>Closed</option></select>
+          <select id="priorityFilter"><option>All priorities</option><option>Urgent</option><option>High</option><option>Medium</option><option>Low</option></select>
+          <button id="resetData" class="secondary">Reset demo</button>
+        </div>
+      </div>
+      <div class="tableWrap">
+        <table><thead><tr><th>Incident</th><th>Status</th><th>Priority</th><th>Description</th><th>Action</th></tr></thead><tbody id="incidentRows"></tbody></table>
+        <div id="empty" class="empty" hidden>No incidents match the current filters.</div>
+      </div>
+    </section>
+
+    <section class="flow">
+      <div><p class="eyebrow">CAP SERVICE DESIGN</p><h2>Metadata-driven architecture</h2></div>
+      <div class="flowSteps"><span>SAP Fiori Elements</span><b>→</b><span>OData v4</span><b>→</b><span>CAP service + rules</span><b>→</b><span>SQLite</span></div>
+    </section>
+  </main>
+
+  <dialog id="incidentDialog">
+    <form id="incidentForm">
+      <div class="dialogHead"><div><p class="eyebrow">NEW SERVICE RECORD</p><h2>Create incident</h2></div><button type="button" class="icon" data-close>×</button></div>
+      <label>Title<input id="title" required minlength="5" maxlength="100" placeholder="Describe the issue"></label>
+      <label>Description<textarea id="description" required maxlength="500" placeholder="Add operational details"></textarea></label>
+      <div class="formRow"><label>Status<select id="status"><option>New</option><option>InProgress</option></select></label><label>Priority<select id="priority"><option>Medium</option><option>Low</option><option>High</option><option>Urgent</option></select></label></div>
+      <p id="formError" class="error"></p>
+      <div class="dialogActions"><button type="button" class="secondary" data-close>Cancel</button><button class="primary">Create record</button></div>
+    </form>
+  </dialog>
+
+  <dialog id="detailDialog">
+    <div class="dialogHead"><div><p class="eyebrow">INCIDENT OBJECT PAGE</p><h2 id="detailTitle"></h2></div><button class="icon" data-detail-close>×</button></div>
+    <div id="detailBody"></div>
+    <div class="dialogActions"><button class="secondary" data-detail-close>Close view</button><button id="closeIncident" class="primary">Close incident</button></div>
+  </dialog>
+
+  <div id="toast" role="status"></div>
+  <script src="app.js"></script>
+</body>
+</html>
