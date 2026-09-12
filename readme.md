@@ -4,6 +4,12 @@
 
 An enterprise-style incident management application built using the **SAP Cloud Application Programming Model (CAP)**, **Node.js**, **OData v4**, **SQLite**, and **SAP Fiori Elements**.
 
+## 🌐 Live Interactive Demo
+
+**[Open the SAP Incident Management demo](https://banoth281.github.io/sap-incident-management/)**
+
+Explore incident KPIs, search and filters, create service records, open an incident object page, and run the simulated `closeIncident` action. The browser demo mirrors the CAP entity and business rules while the repository contains the full Node.js, CDS, OData v4, SQLite and Fiori implementation.
+
 This project demonstrates CDS data modelling, OData service development, custom business logic, SAP Fiori Elements integration, database connectivity, and automated validation through GitHub Actions.
 
 ---
